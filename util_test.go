@@ -155,7 +155,7 @@ func TestUpgradeSlowClient(t *testing.T) {
 					}
 					return nil
 				},
-				OnHeader: func(key, value []byte) error {
+				OnHeader: func(key, value []byte, conn io.ReadWriter) error {
 					receivedHeader.Add(string(key), string(value))
 					return nil
 				},

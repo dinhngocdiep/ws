@@ -31,7 +31,7 @@ type upgradeCase struct {
 	negotiate func(httphead.Option) (httphead.Option, error)
 	onRequest func(u []byte) error
 	onHost    func(h []byte) error
-	onHeader  func(k, v []byte) error
+	onHeader  func(k, v []byte, conn io.ReadWriter) error
 
 	nonce        []byte
 	removeSecKey bool
@@ -242,7 +242,7 @@ var upgradeCases = []upgradeCase{
 
 		onRequest: func([]byte) error { return nil },
 		onHost:    func([]byte) error { return nil },
-		onHeader:  func(k, v []byte) error { return nil },
+		onHeader:  func(k, v []byte, conn io.ReadWriter) error { return nil },
 
 		res: mustMakeErrResponse(400, ErrHandshakeBadUpgrade, nil),
 		err: ErrHandshakeBadUpgrade,

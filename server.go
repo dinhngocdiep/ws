@@ -383,7 +383,7 @@ type Upgrader struct {
 	// sent with appropriate HTTP error code and body set to error message.
 	//
 	// RejectConnectionError could be used to get more control on response.
-	OnHeader func(key, value []byte) error
+	OnHeader func(key, value []byte, conn io.ReadWriter) error
 
 	// OnBeforeUpgrade is a callback that will be called before sending
 	// successful upgrade response.
@@ -579,7 +579,7 @@ func (u Upgrader) Upgrade(conn io.ReadWriter) (hs Handshake, err error) {
 
 		default:
 			if onHeader := u.OnHeader; onHeader != nil {
-				err = onHeader(k, v)
+				err = onHeader(k, v, conn)
 			}
 		}
 	}
