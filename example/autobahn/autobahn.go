@@ -15,10 +15,10 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/dinhngocdiep/ws"
+	"github.com/dinhngocdiep/ws/wsflate"
+	"github.com/dinhngocdiep/ws/wsutil"
 	"github.com/gobwas/httphead"
-	"github.com/gobwas/ws"
-	"github.com/gobwas/ws/wsflate"
-	"github.com/gobwas/ws/wsutil"
 )
 
 var addr = flag.String("listen", ":9001", "addr to listen")

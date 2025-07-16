@@ -3,8 +3,8 @@ package wsutil
 import (
 	"io"
 
+	"github.com/dinhngocdiep/ws"
 	"github.com/gobwas/pool/pbytes"
-	"github.com/gobwas/ws"
 )
 
 // CipherReader implements io.Reader that applies xor-cipher to the bytes read

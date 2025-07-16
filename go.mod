@@ -1,4 +1,4 @@
-module github.com/gobwas/ws
+module github.com/dinhngocdiep/ws
 
 go 1.16
 

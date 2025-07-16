@@ -3,8 +3,8 @@ package wsflate
 import (
 	"bytes"
 
+	"github.com/dinhngocdiep/ws"
 	"github.com/gobwas/httphead"
-	"github.com/gobwas/ws"
 )
 
 // Extension contains logic of compression extension parameters negotiation

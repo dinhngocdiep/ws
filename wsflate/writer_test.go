@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"testing"
 
+	"github.com/dinhngocdiep/ws"
 	"github.com/gobwas/httphead"
-	"github.com/gobwas/ws"
 )
 
 func TestWriter(t *testing.T) {

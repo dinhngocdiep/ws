@@ -6,7 +6,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/gobwas/ws"
+	"github.com/dinhngocdiep/ws"
 )
 
 // ErrNoFrameAdvance means that Reader's Read() method was called without

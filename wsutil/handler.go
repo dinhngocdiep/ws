@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"strconv"
 
+	"github.com/dinhngocdiep/ws"
 	"github.com/gobwas/pool/pbytes"
-	"github.com/gobwas/ws"
 )
 
 // ClosedError returned when peer has closed the connection with appropriate

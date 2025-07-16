@@ -5,7 +5,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/gobwas/ws"
+	"github.com/dinhngocdiep/ws"
 )
 
 // Message represents a message from peer, that could be presented in one or

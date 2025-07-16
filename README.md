@@ -40,7 +40,7 @@ about 78% coverage.
 # Examples
 
 Example applications using `ws` are developed in separate repository
-[ws-examples](https://github.com/gobwas/ws-examples).
+[ws-examples](https://github.com/dinhngocdiep/ws-examples).
 
 # Usage
 
@@ -52,8 +52,8 @@ package main
 import (
 	"net/http"
 
-	"github.com/gobwas/ws"
-	"github.com/gobwas/ws/wsutil"
+	"github.com/dinhngocdiep/ws"
+	"github.com/dinhngocdiep/ws/wsutil"
 )
 
 func main() {
@@ -88,8 +88,8 @@ import (
 	"net/http"
 	"io"
 
-	"github.com/gobwas/ws"
-	"github.com/gobwas/ws/wsutil"
+	"github.com/dinhngocdiep/ws"
+	"github.com/dinhngocdiep/ws/wsutil"
 )
 
 func main() {
@@ -169,7 +169,7 @@ import (
 	"net"
 	"io"
 
-	"github.com/gobwas/ws"
+	"github.com/dinhngocdiep/ws"
 )
 
 func main() {
@@ -243,7 +243,7 @@ import (
 	"net"
 	"log"
 
-	"github.com/gobwas/ws"
+	"github.com/dinhngocdiep/ws"
 )
 
 func main() {
@@ -291,7 +291,7 @@ import (
 	"runtime"
 
 	"github.com/gobwas/httphead"
-	"github.com/gobwas/ws"
+	"github.com/dinhngocdiep/ws"
 )
 
 func main() {
@@ -372,8 +372,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/gobwas/ws"
-	"github.com/gobwas/ws/wsflate"
+	"github.com/dinhngocdiep/ws"
+	"github.com/dinhngocdiep/ws/wsflate"
 )
 
 func main() {
@@ -534,8 +534,8 @@ You can use compression with `wsutil` package this way:
 
 [rfc-url]: https://tools.ietf.org/html/rfc6455
 [rfc-pmce]: https://tools.ietf.org/html/rfc7692#section-7
-[godoc-image]: https://godoc.org/github.com/gobwas/ws?status.svg
-[godoc-url]: https://godoc.org/github.com/gobwas/ws
+[godoc-image]: https://godoc.org/github.com/dinhngocdiep/ws?status.svg
+[godoc-url]: https://godoc.org/github.com/dinhngocdiep/ws
 [compress/flate]: https://golang.org/pkg/compress/flate/
-[ci-badge]:    https://github.com/gobwas/ws/workflows/CI/badge.svg
-[ci-url]:      https://github.com/gobwas/ws/actions?query=workflow%3ACI
+[ci-badge]:    https://github.com/dinhngocdiep/ws/workflows/CI/badge.svg
+[ci-url]:      https://github.com/dinhngocdiep/ws/actions?query=workflow%3ACI
