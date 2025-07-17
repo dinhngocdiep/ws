@@ -137,7 +137,7 @@ func TestUpgradeSlowClient(t *testing.T) {
 			)
 			receivedHeader := http.Header{}
 			u := Upgrader{
-				OnRequest: func(uri []byte) error {
+				OnRequest: func(uri []byte, conn io.ReadWriter) error {
 					if u := string(uri); u != expURI {
 						t.Errorf(
 							"unexpected URI in OnRequest() callback: %q; want %q",

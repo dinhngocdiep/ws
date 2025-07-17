@@ -29,7 +29,7 @@ type upgradeCase struct {
 
 	protocol  func(string) bool
 	negotiate func(httphead.Option) (httphead.Option, error)
-	onRequest func(u []byte) error
+	onRequest func(u []byte, conn io.ReadWriter) error
 	onHost    func(h []byte) error
 	onHeader  func(k, v []byte, conn io.ReadWriter) error
 
@@ -240,7 +240,7 @@ var upgradeCases = []upgradeCase{
 			headerSecVersion:  []string{"13"},
 		}),
 
-		onRequest: func([]byte) error { return nil },
+		onRequest: func(uri []byte, conn io.ReadWriter) error { return nil },
 		onHost:    func([]byte) error { return nil },
 		onHeader:  func(k, v []byte, conn io.ReadWriter) error { return nil },
 

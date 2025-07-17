@@ -355,7 +355,7 @@ type Upgrader struct {
 	// sent with appropriate HTTP error code and body set to error message.
 	//
 	// RejectConnectionError could be used to get more control on response.
-	OnRequest func(uri []byte) error
+	OnRequest func(uri []byte, conn io.ReadWriter) error
 
 	// OnHost is a callback that will be called after "Host" header successful
 	// parsing.
@@ -487,7 +487,7 @@ func (u Upgrader) Upgrade(conn io.ReadWriter) (hs Handshake, err error) {
 
 	default:
 		if onRequest := u.OnRequest; onRequest != nil {
-			err = onRequest(req.uri)
+			err = onRequest(req.uri, conn)
 		}
 	}
 	// Start headers read/parse loop.
